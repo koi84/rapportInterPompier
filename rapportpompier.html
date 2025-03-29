@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Intervention Pompiers</title>
+    <link rel="stylesheet" href="rapportpompier.css"> <!-- Lien vers le fichier CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Icônes FontAwesome -->
+</head>
+<body>
+
+<!-- Menu de navigation -->
+<nav class="menu">
+    <button onclick="window.location.href='index.html'" id="accueilBtn">Accueil</button>
+    <button onclick="window.location.href='effectifems.html'" id="effectifEMSBtn">Effectif EMS</button>
+    <button onclick="window.location.href='effectifpompier.html'" id="effectifPompierBtn">Effectif Pompiers</button>
+    <button onclick="window.location.href='rapportpompier.html'" id="rapportPompierBtn">Rapport Pompiers</button>
+    <button onclick="window.location.href='rapportems.html'" id="rapportEMSBtn">Rapport EMS</button>
+</nav>
+
+<!-- Logo Caserne Pompiers -->
+<div class="logo-container">
+    <img src="casernepompier.png" alt="Logo Caserne Pompiers" class="logo">
+</div>
+
+<!-- Formulaire de Rapport Intervention Pompiers -->
+<div class="container">
+    <h1>Rapport d'Intervention Pompiers 🚒</h1>
+    
+    <!-- Formulaire de saisie -->
+    <div class="input-group">
+        <label for="date"><i class="fas fa-calendar-alt icon"></i> 📅 Date :</label>
+        <input type="date" id="date" required>
+    </div>
+    <div class="input-group">
+        <label for="heure"><i class="fas fa-clock icon"></i> 🕒 Heure :</label>
+        <input type="time" id="heure" required>
+    </div>
+    <div class="input-group">
+        <label for="pompiers"><i class="fas fa-user-alt icon"></i> 👨‍🚒 Nom des Pompiers :</label>
+        <input type="text" id="pompiers" placeholder="Ex : Jean Dupont" required>
+    </div>
+    <div class="input-group">
+        <label for="lieu"><i class="fas fa-map-marker-alt icon"></i> 📍 Lieu :</label>
+        <input type="text" id="lieu" required>
+    </div>
+    <div class="input-group">
+        <label for="type"><i class="fas fa-exclamation-circle icon"></i> 🚨 Type d'Intervention :</label>
+        <select id="type" required>
+            <option value="Feu">Feu</option>
+            <option value="Nettoyage route arbre">Nettoyage route arbre</option>
+            <option value="Nettoyage route marchandise">Nettoyage route marchandise</option>
+            <option value="Nettoyage route essence">Nettoyage route essence</option>
+        </select>
+    </div>
+    <button onclick="genererRapport()">Générer le Rapport</button>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>Powered by <a href="https://discord.gg/Sb24XgVqkw">©Urgences / Pompiers</a></p>
+</div>
+
+<!-- Script pour générer le rapport -->
+<script src="rapportpompier.js"></script>
+</body>
+</html>

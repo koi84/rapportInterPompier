@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alignement en haut de la page */
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px; /* Plus d'espace pour le menu */
+    background-color: #e74c3c; /* Couleur rouge */
+    position: fixed; /* Fixer le menu en haut */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Assure que le menu reste au-dessus du reste */
+}
+
+.menu button {
+    background-color: #fff;
+    color: #e74c3c;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centrer le logo */
+    padding-top: 80px; /* Décalage pour éviter que le logo soit caché sous le menu */
+}
+
+.logo {
+    width: 200px; /* Taille du logo encore plus grande */
+    height: auto;
+}
+
+.container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    margin-top: 150px; /* Espace après le logo */
+}
+
+h1 {
+    font-size: 30px;
+    color: #e74c3c;
+    margin-bottom: 30px;
+    font-weight: bold; /* Mettre le titre en gras */
+    text-transform: uppercase; /* Mettre en majuscule */
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600; /* Mettre le message en gras pour plus d'impact */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b; /* Légère nuance pour l'effet hover */
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer a {
+    color: #e74c3c;
+    text-decoration: none;
+}

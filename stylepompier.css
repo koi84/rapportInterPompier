@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    justify-content: flex-start; /* Ne touche pas aux boutons en haut */
+    min-height: 100vh;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #e74c3c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.menu button {
+    background-color: #fff;
+    color: #e74c3c;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Section pour l'image */
+.effectif-img-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement l'image */
+    margin-top: 100px; /* Espace sous le menu */
+    width: 100%;
+}
+
+.effectif-img {
+    width: 90%;  /* Ajuste la largeur de l'image à 90% de l'écran */
+    max-width: 1000px; /* Limite la taille maximale de l'image pour qu'elle ne déborde pas */
+    height: auto;
+    border-radius: 10px; /* Ajoute des coins arrondis si nécessaire */
+}
