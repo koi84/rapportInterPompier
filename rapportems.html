@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Intervention EMS</title>
+    <link rel="stylesheet" href="rapportems.css"> <!-- Lien vers le fichier CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Icônes FontAwesome -->
+</head>
+<body>
+
+<!-- Menu de navigation -->
+<nav class="menu">
+    <button onclick="window.location.href='index.html'" id="accueilBtn">Accueil</button>
+    <button onclick="window.location.href='effectifems.html'" id="effectifEMSBtn">Effectif EMS</button>
+    <button onclick="window.location.href='effectifpompier.html'" id="effectifPompierBtn">Effectif Pompiers</button>
+    <button onclick="window.location.href='rapportpompier.html'" id="rapportPompierBtn">Rapport Pompiers</button>
+    <button onclick="window.location.href='rapportems.html'" id="rapportEMSBtn">Rapport EMS</button>
+</nav>
+
+<!-- Logo EMS -->
+<div class="logo-container">
+    <img src=".asernepompier.png" alt="Logo EMS" class="logo">
+</div>
+
+<!-- Formulaire de Rapport Intervention EMS -->
+<div class="container">
+    <h1>Rapport d'Intervention EMS 🚑</h1>
+    
+    <!-- Formulaire de saisie -->
+    <div class="input-group">
+        <label for="gerant"><i class="fas fa-user-alt icon"></i> Gérant de l'Intervention :</label>
+        <input type="text" id="gerant" placeholder="Ex : Dr. Jean Dupont" required>
+    </div>
+    <div class="input-group">
+        <label for="nom"><i class="fas fa-user-alt icon"></i> Nom Complet :</label>
+        <input type="text" id="nom" placeholder="Ex : Marie Curie" required>
+    </div>
+    <div class="input-group">
+        <label for="raison"><i class="fas fa-exclamation-circle icon"></i> Raison d'Intervention :</label>
+        <input type="text" id="raison" placeholder="Ex : Accident de la route" required>
+    </div>
+    <div class="input-group">
+        <label for="degats"><i class="fas fa-heart-broken icon"></i> Dégâts Repérés :</label>
+        <input type="text" id="degats" placeholder="Ex : Fracture du bras" required>
+    </div>
+    <div class="input-group">
+        <label for="moyens"><i class="fas fa-ambulance icon"></i> Moyens Utilisés :</label>
+        <input type="text" id="moyens" placeholder="Ex : Brancard, perfusion" required>
+    </div>
+    <div class="input-group">
+        <label for="traitement"><i class="fas fa-capsules icon"></i> Traitement Conseillé :</label>
+        <input type="text" id="traitement" placeholder="Ex : Repos, médication" required>
+    </div>
+    <div class="input-group">
+        <label for="couts"><i class="fas fa-money-bill-wave icon"></i> Coûts Demandés :</label>
+        <input type="text" id="couts" placeholder="Ex : 500€" required>
+    </div>
+    <button onclick="genererRapportEMS()">Générer le Rapport</button>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>Powered by <a href="https://discord.gg/Sb24XgVqkw">©Urgences / EMS</a></p>
+</div>
+
+<!-- Script pour générer le rapport -->
+<script src="rapportems.js"></script>
+</body>
+</html>
