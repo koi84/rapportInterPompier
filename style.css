@@ -128,3 +128,42 @@ button:hover {
     color: #e74c3c;
     text-decoration: none;
 }
+
+/* Rendre les éléments responsives */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu button {
+        width: 90%; /* Les boutons prennent toute la largeur */
+        margin-bottom: 5px;
+    }
+
+    .container {
+        width: 95%; /* Évite que le formulaire soit trop large */
+        padding: 20px;
+    }
+
+    input, select, button {
+        font-size: 14px; /* Rendre le texte plus lisible sur mobile */
+        padding: 10px;
+    }
+
+    .effectif-img, .parking-img {
+        width: 100%; /* Adapter l’image à l’écran */
+        height: auto; 
+    }
+
+    .logo {
+        width: 60px; /* Réduire la taille du logo pour éviter qu’il prenne trop de place */
+    }
+}

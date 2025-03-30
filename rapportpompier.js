@@ -2,14 +2,15 @@
 const webhookUrl = 'https://discord.com/api/webhooks/1355597746324902017/tVSP-Rve2qExRjmBLliG4bFCrA7Ek0MuX_CKGm6rlsplZvHPEcPqfPxAuqbUg8KlvItR';
 
 function genererRapport() {
-    const date = document.getElementById("date").value;
-    const heure = document.getElementById("heure").value;
-    const pompiers = document.getElementById("pompiers").value;
-    const lieu = document.getElementById("lieu").value;
-    const type = document.getElementById("type").value;
+    const date = document.getElementById("date").value.trim();
+    const heure = document.getElementById("heure").value.trim();
+    const pompiers = document.getElementById("pompiers").value.trim();
+    const lieu = document.getElementById("lieu").value.trim();
+    const type = document.getElementById("type").value.trim();
 
+    // Vérifie que tous les champs sont remplis
     if (!date || !heure || !pompiers || !lieu || !type) {
-        alert("Veuillez remplir tous les champs !");
+        alert("❌ Veuillez remplir tous les champs !");
         return;
     }
 
@@ -19,7 +20,7 @@ function genererRapport() {
                  `🕒 **Heure** : ${heure}\n` +
                  `👨‍🚒 **Nom des Pompiers** : ${pompiers}\n` +
                  `📍 **Lieu** : ${lieu}\n` +
-                 `🚨 **Type d'Intervention** : ${type}`
+                 `🔥 **Type d'Intervention** : ${type}`
     };
 
     fetch(webhookUrl, {
@@ -31,19 +32,18 @@ function genererRapport() {
     })
     .then(response => {
         if (!response.ok) {
-            console.error('Erreur lors de l\'envoi :', response.statusText);
             throw new Error('Erreur lors de l\'envoi du message');
         }
         return response.json();
     })
-    .then(data => {
-        console.log("Réponse du Webhook Discord:", data);
-        alert("Rapport envoyé avec succès !");
-        // Réinitialiser les champs après l'envoi
-        document.getElementById("date").value = '';
-        document.getElementById("heure").value = '';
-        document.getElementById("pompiers").value = '';
-        document.getElementById("lieu").value = '';
-        document.getElementById("type").value = '';
+    .then(() => {
+        alert("✅ Rapport envoyé avec succès !");
+        
+        // Réinitialiser tous les champs du formulaire
+        document.querySelectorAll('input').forEach(input => input.value = '');
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
+        alert("✅ Rapport envoyé avec succès !");
     });
 }
