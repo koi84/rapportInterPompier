@@ -5,24 +5,20 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
-    margin: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centre le contenu horizontalement */
-    justify-content: flex-start; /* Ne touche pas aux boutons en haut */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
 }
 
 .menu {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
-    background-color: #e74c3c;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Rouge pompier */
 }
 
 .menu button {
@@ -36,21 +32,104 @@ body {
 }
 
 .menu button:hover {
-    background-color: #e74c3c;
+    background-color: #c0392b;
     color: white;
 }
 
-/* Section pour l'image */
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
 .effectif-img-container {
     display: flex;
-    justify-content: center; /* Centre horizontalement l'image */
-    margin-top: 100px; /* Espace sous le menu */
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 100px; 
     width: 100%;
+    max-height: 80vh; 
+    overflow: auto;
 }
 
 .effectif-img {
-    width: 90%;  /* Ajuste la largeur de l'image à 90% de l'écran */
-    max-width: 1000px; /* Limite la taille maximale de l'image pour qu'elle ne déborde pas */
-    height: auto;
-    border-radius: 10px; /* Ajoute des coins arrondis si nécessaire */
+    width: auto;
+    max-width: 80%; /* Réduit la largeur pour mieux s’adapter */
+    max-height: 80vh; /* Limite la hauteur pour éviter le débordement */
+    object-fit: contain; 
+    border-radius: 10px;
+    transform: scale(1.0); /* Applique un effet de dézoom */
 }

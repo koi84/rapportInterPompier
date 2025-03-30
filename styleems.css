@@ -114,3 +114,23 @@ button:hover {
     color: #2980b9;
     text-decoration: none;
 }
+
+.effectif-img-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 100px; 
+    width: 100%;
+    max-height: 80vh; 
+    overflow: auto;
+}
+
+.effectif-img {
+    width: auto;
+    max-width: 80%; /* Réduit la largeur pour mieux s’adapter */
+    max-height: 80vh; /* Limite la hauteur pour éviter le débordement */
+    object-fit: contain; 
+    border-radius: 10px;
+    transform: scale(1.0); /* Applique un effet de dézoom */
+}
+

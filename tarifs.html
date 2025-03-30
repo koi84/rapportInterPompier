@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'Accueil - Urgences / Pompiers</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+    <title>Tarifs - EMS</title>
+    <link rel="stylesheet" href="styletarif.css">
 </head>
 <body>
 
-<!-- Menu de navigation avec des boutons côte à côte -->
+ <!-- Menu de navigation avec des boutons côte à côte -->
 <nav class="menu">
     <button onclick="window.location.href='index.html'" id="accueilBtn">Accueil</button>
     <button onclick="window.location.href='effectifems.html'" id="effectifEMSBtn">Effectif EMS</button>
@@ -20,18 +19,28 @@
     <button onclick="window.location.href='parking.html'">Parking</button>
 </nav>
 
-<!-- Logo -->
-<header>
-    <img src="casernepompier.png" alt="Logo Caserne Pompiers" class="logo">
-</header>
+    <div class="container">
+        <h1>Tarifs des Interventions</h1>
+        <p>Bonsoir, voici la grille tarifaire pour vos interventions :</p>
 
-<!-- Message de bienvenue -->
-<section class="accueil">
-    <h1>Bienvenue sur le site des Urgences / Pompiers</h1>
-    <p>Choisissez une des options dans le menu pour consulter les effectifs ou les rapports d'intervention.</p>
-    <p>Ce site est exclusivement réservé pour les membres de la caserne</p>
-</section>
-<!-- Footer -->
+        <div class="tarif-box">
+            <p><strong>🩹 Premier soin (pansement, aide mineure) :</strong> 1 000 €</p>
+        </div>
+
+        <div class="tarif-box">
+            <p><strong>🚑 Transport d’urgence vers l’hôpital :</strong> 2 000 €</p>
+        </div>
+
+        <div class="tarif-box">
+            <p><strong>🏥 Soins sur place pour blessure grave :</strong> 3 000 €</p>
+        </div>
+
+        <div class="tarif-box">
+            <p><strong>🔪 Opération normale :</strong> 4 000 € <br> (Si urgente : 5 000 €)</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
 <div class="footer">
     <p>Powered by <a href="https://discord.gg/Sb24XgVqkw">©Urgences / Pompiers</a></p>
 </div>
