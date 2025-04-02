@@ -11,21 +11,21 @@ body {
     min-height: 100vh;
     margin: 0;
     flex-direction: column;
-    padding-top: 60px; /* Pour éviter que le contenu soit caché sous le menu */
+    padding-top: 60px; /* Pour éviter que le menu cache le contenu */
 }
 
 /* Barre de menu fixée en haut */
 .menu {
     width: 100%;
     display: flex;
-    justify-content: center; /* Centre les boutons horizontalement */
-    gap: 10px; /* Réduit l’espace entre les boutons */
+    justify-content: center;
+    gap: 5px; /* Moins d’espace entre les boutons */
     padding: 10px;
-    background-color: #2980b9; /* Couleur EMS */
+    background-color: #2980b9; /* Bleu EMS */
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1000;
 }
 
 /* Style des boutons */
@@ -33,10 +33,10 @@ body {
     background-color: #fff;
     color: #2980b9;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 12px; /* Boutons un peu plus petits */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .menu button:hover {
@@ -52,6 +52,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-top: 80px; /* Ajouté pour éviter que le menu cache le contenu */
 }
 
 h1 {
@@ -60,13 +61,8 @@ h1 {
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 16px;
-    color: #333;
-}
-
 .tarif-box {
-    background-color: #f0f8ff; /* Bleu clair */
+    background-color: #f0f8ff;
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
@@ -86,41 +82,31 @@ p {
     text-decoration: none;
 }
 
-/* Rendre les éléments responsives */
+/* 📱 Responsivité */
 @media screen and (max-width: 768px) {
     body {
-        flex-direction: column;
-        align-items: center;
         padding: 10px;
     }
 
     .menu {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 5px;
     }
 
     .menu button {
-        width: 90%; /* Les boutons prennent toute la largeur */
-        margin-bottom: 5px;
+        width: 90%;
+        margin-bottom: 3px;
+        font-size: 13px;
     }
 
     .container {
-        width: 95%; /* Évite que le formulaire soit trop large */
+        width: 95%;
         padding: 20px;
-    }
-
-    input, select, button {
-        font-size: 14px; /* Rendre le texte plus lisible sur mobile */
-        padding: 10px;
-    }
-
-    .effectif-img, .parking-img {
-        width: 100%; /* Adapter l’image à l’écran */
-        height: auto; 
+        margin-top: 100px; /* Ajustement pour les mobiles */
     }
 
     .logo {
-        width: 60px; /* Réduire la taille du logo pour éviter qu’il prenne trop de place */
+        width: 50px; /* Réduction du logo */
     }
 }
