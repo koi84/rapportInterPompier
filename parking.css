@@ -112,7 +112,8 @@ h1 {
     .menu button {
         width: 90%;
         margin-bottom: 3px;
-        font-size: 13px;
+        font-size: 12px; /* Réduction de la taille de la police des boutons */
+        padding: 6px 10px; /* Réduction du padding pour rendre les boutons plus petits */
     }
 
     .container {
@@ -140,4 +141,5 @@ h1 {
         width: 50px; /* Réduction du logo */
     }
 }
+
 
