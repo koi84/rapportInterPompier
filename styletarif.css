@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -11,9 +9,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
     flex-direction: column;
-    padding-top: 70px; /* Augmenté pour éviter tout chevauchement */
-    overflow-x: hidden; /* Empêche le débordement horizontal */
+    padding-top: 60px; /* Pour éviter que le menu cache le contenu */
 }
 
 /* Barre de menu fixée en haut */
@@ -21,15 +19,13 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si besoin */
-    gap: 5px;
-    padding: 8px;
-    background-color: #2980b9;
+    gap: 5px; /* Moins d’espace entre les boutons */
+    padding: 10px;
+    background-color: #2980b9; /* Bleu EMS */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    overflow: hidden; /* Empêche le débordement du menu */
 }
 
 /* Style des boutons */
@@ -37,11 +33,10 @@ body {
     background-color: #fff;
     color: #2980b9;
     border: none;
-    padding: 6px 10px; /* Boutons plus petits */
+    padding: 8px 12px; /* Boutons un peu plus petits */
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
 }
 
 .menu button:hover {
@@ -51,13 +46,19 @@ body {
 
 .container {
     background-color: #fff;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 100px; /* Ajustement pour le menu */
+    margin-top: 80px; /* Ajouté pour éviter que le menu cache le contenu */
+}
+
+h1 {
+    font-size: 24px;
+    color: #2980b9;
+    margin-bottom: 20px;
 }
 
 .tarif-box {
@@ -70,8 +71,25 @@ body {
     text-align: left;
 }
 
-/* 📱 Ajustements pour mobile */
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+/* 📱 Responsivité */
 @media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        /* Ajoute un padding à droite pour s'assurer qu'il n'y a pas de débordement */
+        padding-right: 10px;
+    }
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -79,14 +97,24 @@ body {
     }
 
     .menu button {
-        width: 95%;
+        width: 90%;
+        margin-bottom: 3px;
         font-size: 13px;
-        padding: 8px;
     }
 
     .container {
-        width: 95%;
+        width: 100%;  /* Utilise toute la largeur disponible */
+        max-width: 600px; /* S'assure que la largeur ne dépasse pas la taille du conteneur */
         padding: 20px;
-        margin-top: 110px;
+        margin-top: 120px; /* Réajuste l'espacement supérieur pour mobile */
+    }
+
+    .tarif-box {
+        font-size: 14px; /* Rendre le texte un peu plus petit sur mobile */
+    }
+
+    .logo {
+        width: 50px; /* Réduction du logo */
     }
 }
+

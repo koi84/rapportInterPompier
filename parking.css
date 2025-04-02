@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -11,9 +9,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
     flex-direction: column;
-    padding-top: 70px;
-    overflow-x: hidden;
+    padding-top: 60px; /* Évite que le menu cache le contenu */
 }
 
 /* Barre de menu */
@@ -21,26 +19,23 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 5px;
-    padding: 8px;
-    background-color: #e74c3c;
+    padding: 10px;
+    background-color: #e74c3c; /* Rouge pompiers */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    overflow: hidden;
 }
 
 .menu button {
     background-color: #fff;
     color: #e74c3c;
     border: none;
-    padding: 6px 10px;
+    padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    white-space: nowrap;
 }
 
 .menu button:hover {
@@ -50,16 +45,22 @@ body {
 
 .container {
     background-color: #fff;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 100px;
+    margin-top: 80px; /* Ajouté pour éviter que le menu cache le contenu */
 }
 
-/* Grille du parking */
+h1 {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+/* 📌 Grille du parking */
 .parking-grid {
     display: flex;
     flex-direction: column;
@@ -76,16 +77,32 @@ body {
     font-weight: bold;
 }
 
-/* Images du parking */
+/* 🏞 Image du parking */
 .parking-image img {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     border-radius: 10px;
     margin-top: 20px;
 }
 
-/* 📱 Ajustements pour mobile */
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+/* 📱 Responsivité */
 @media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        padding-right: 10px;  /* Ajout d'un padding à droite pour éviter le débordement */
+    }
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -93,18 +110,34 @@ body {
     }
 
     .menu button {
-        width: 95%;
+        width: 90%;
+        margin-bottom: 3px;
         font-size: 13px;
-        padding: 8px;
     }
 
     .container {
-        width: 95%;
+        width: 100%; /* Utilisation de toute la largeur */
+        max-width: 600px; /* Assure que la largeur ne dépasse pas celle du conteneur */
         padding: 20px;
-        margin-top: 110px;
+        margin-top: 120px; /* Ajustement pour l'espacement supérieur */
+    }
+
+    .parking-grid {
+        flex-direction: column; /* Placer les éléments en colonne pour plus de lisibilité */
+    }
+
+    .parking-slot {
+        font-size: 14px; /* Réduire la taille de la police pour les écrans plus petits */
     }
 
     .parking-image img {
-        max-width: 350px;
+        width: 100%; /* S'assure que l'image occupe toute la largeur sans déborder */
+        max-width: 400px; /* Limite la largeur de l'image */
+        height: auto;
+    }
+
+    .logo {
+        width: 50px; /* Réduction du logo */
     }
 }
+
